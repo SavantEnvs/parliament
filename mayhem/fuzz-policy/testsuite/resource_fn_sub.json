@@ -1,0 +1,12 @@
+{
+  "Version":"2012-10-17",
+  "Statement":[
+    {
+      "Sid":"AddPerm",
+      "Effect":"Allow",
+      "Principal": "*",
+      "Action":["ssm:PutParameter"],
+      "Resource":[{"Fn::Sub": "arn:aws:ssm:*:${AWS::AccountId}:*"}]
+    }
+  ]
+}

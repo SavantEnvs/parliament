@@ -1,0 +1,13 @@
+project: savantenvs/parliament
+target: fuzz-policy
+# Per-target starter seeds (IAM policy JSON documents lifted from upstream's own unit tests / README)
+# plus the server-accumulated corpus. The local path is resolved on the CI runner checkout.
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-policy/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-policy
+    libfuzzer: true
+    # IAM policy grammar tokens (JSON keys, effects, condition operators, ARN prefixes, action names).
+    # Absolute path is correct here: it READS baked-in image data (see the fuzz-policy/ directory).
+    dictionary: /mayhem/mayhem/fuzz-policy/fuzz-policy.dict

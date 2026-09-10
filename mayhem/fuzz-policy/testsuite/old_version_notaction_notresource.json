@@ -1,0 +1,16 @@
+{
+    "Version": "2008-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "NotAction": ["iam:*", "organizations:*", "account:*"],
+            "NotResource": "arn:aws:s3:::secretbucket/*"
+        },
+        {
+            "Effect": "Allow",
+            "NotPrincipal": {"AWS": "arn:aws:iam::123456789012:user/alice"},
+            "Action": "sts:AssumeRole",
+            "Resource": "*"
+        }
+    ]
+}

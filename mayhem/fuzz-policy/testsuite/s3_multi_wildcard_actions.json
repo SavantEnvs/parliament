@@ -1,0 +1,28 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+    "Action": [
+        "s3:ListBucket",
+        "s3:Put*",
+        "s3:Get*",
+        "s3:*MultipartUpload*"
+    ],
+    "Resource": [
+        "*"
+    ],
+    "Effect": "Allow"
+},
+{
+    "Action": [
+        "s3:*Policy*",
+        "sns:*Permission*",
+        "sns:*Delete*",
+        "s3:*Delete*",
+        "sns:*Remove*"
+    ],
+    "Resource": [
+        "*"
+    ],
+    "Effect": "Deny"
+}]}

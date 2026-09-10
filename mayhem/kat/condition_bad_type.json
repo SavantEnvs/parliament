@@ -1,0 +1,7 @@
+{
+    "Version": "2012-10-17",
+    "Statement": {
+        "Effect": "Allow",
+        "Action": "s3:listbucket",
+        "Resource": "arn:aws:s3:::bucket-name",
+        "Condition": {"StringEquals": {"s3:signatureage":"bad"}} }}

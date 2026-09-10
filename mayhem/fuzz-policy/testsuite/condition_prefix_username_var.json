@@ -1,0 +1,10 @@
+{
+    "Version": "2012-10-17",
+    "Statement": {
+        "Effect": "Allow",
+        "Action": "s3:listbucket",
+        "Resource": "arn:aws:s3:::bucket-name",
+        "Condition": {
+            "DateGreaterThan" :{"aws:CurrentTime" : "2019-07-16T12:00:00Z"},
+            "StringEquals": {"s3:prefix":["home/${aws:username}/*"]}
+        } }}

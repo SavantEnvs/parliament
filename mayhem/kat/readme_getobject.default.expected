@@ -1,0 +1,1 @@
+MEDIUM - No resources match for the given action -  - [{'action': 's3:GetObject', 'required_format': 'arn:*:s3:::*/*'}] - {'line': 3, 'column': 18, 'filepath': 'mayhem/kat/readme_getobject.json'}

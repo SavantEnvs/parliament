@@ -1,0 +1,1 @@
+{"issue": "RESOURCE_MISMATCH", "title": "No resources match for the given action", "severity": "MEDIUM", "description": "", "detail": [{"action": "s3:GetObject", "required_format": "arn:*:s3:::*/*"}], "location": {"line": 3, "column": 18, "filepath": "mayhem/kat/readme_getobject.json"}}

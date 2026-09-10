@@ -1,0 +1,15 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": ["iam:PassRole", "lambda:CreateFunction", "lambda:InvokeFunction"],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": ["iam:CreatePolicyVersion", "iam:AttachUserPolicy", "sts:GetFederationToken"],
+            "Resource": "arn:aws:iam::123456789012:user/${aws:username}"
+        }
+    ]
+}
